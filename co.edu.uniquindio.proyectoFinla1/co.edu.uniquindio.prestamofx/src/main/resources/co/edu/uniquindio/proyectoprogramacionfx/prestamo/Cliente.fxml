@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="592.0" prefWidth="865.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.proyectoprogramacionfx.prestamo.viewcontroler.ClienteViewControler">
+   <children>
+    <AnchorPane layoutX="12.0" layoutY="33.0" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+    <AnchorPane layoutX="-7.0" layoutY="64.0" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+      <SplitPane dividerPositions="0.45532646048109965" layoutX="-1.0" layoutY="3.0" orientation="VERTICAL" prefHeight="584.0" prefWidth="858.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label layoutX="65.0" layoutY="47.0" text="Nombre" />
+                  <Label layoutX="483.0" layoutY="47.0" text="Apellidol" />
+                  <Label layoutX="69.0" layoutY="111.0" text="Cedula" />
+                  <Label layoutX="492.0" layoutY="120.0" text="Email" />
+                  <Label layoutX="62.0" layoutY="166.0" text="Direccion" />
+                  <TextField fx:id="txtNombre" layoutX="131.0" layoutY="44.0" prefHeight="25.0" prefWidth="205.0" />
+                  <TextField fx:id="txtCedula" layoutX="131.0" layoutY="107.0" prefHeight="25.0" prefWidth="205.0" />
+                  <TextField fx:id="txtDireccion" layoutX="131.0" layoutY="171.0" prefHeight="25.0" prefWidth="205.0" />
+                  <TextField fx:id="txtApellido" layoutX="561.0" layoutY="44.0" prefHeight="25.0" prefWidth="205.0" />
+                  <TextField fx:id="txtEmail" layoutX="561.0" layoutY="116.0" prefHeight="25.0" prefWidth="205.0" />
+                  <Separator layoutX="-1.0" layoutY="209.0" prefHeight="6.0" prefWidth="865.0" />
+                  <Button fx:id="btnActualizar" layoutX="208.0" layoutY="225.0" mnemonicParsing="false" onAction="#onActualizar" text="Actualizar " />
+                  <Button fx:id="btnAgregar" layoutX="406.0" layoutY="225.0" mnemonicParsing="false" onAction="#onAgregar" text="agregar" />
+                  <Button fx:id="btnNuevo" layoutX="638.0" layoutY="225.0" mnemonicParsing="false" onAction="#onNuevo" text="Nuevo" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="330.0" prefWidth="408.0">
+               <children>
+                  <Button fx:id="btnEliminar" layoutX="768.0" layoutY="249.0" mnemonicParsing="false" onAction="#onEliminar" text="Eliminar " />
+                  <TableView fx:id="tabVisaulizar" layoutX="2.0" prefHeight="200.0" prefWidth="848.0">
+                    <columns>
+                      <TableColumn fx:id="coluNombre" prefWidth="160.0" text="Nombre" />
+                      <TableColumn fx:id="coluApellido" prefWidth="148.0" text="Apellido" />
+                        <TableColumn fx:id="coluCedula" prefWidth="192.0" text="Cedula" />
+                        <TableColumn fx:id="coluEmail" prefWidth="170.0" text="Email" />
+                        <TableColumn fx:id="coluDireccion" prefWidth="177.0" text="Direccion" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
